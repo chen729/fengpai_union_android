@@ -1,0 +1,70 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 28
+    buildToolsVersion "28.0.3"              /////编译工具需要用到的版本号       add by jack  201905111450
+    defaultConfig {
+        applicationId "com.example.alliance"
+        minSdkVersion 15
+        targetSdkVersion 28
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    lintOptions {
+        disable 'GoogleAppIndexingWarning'
+    }
+
+
+    /////////////////添加高德地图的时候加的  add by jack  201905111450//////////////////////
+    sourceSets {
+        main {
+            jniLibs.srcDirs = ['libs']
+        }
+    }
+
+    signingConfigs {
+        /**
+         * 设置你的keystore相关
+         * demo中只是一个示例，使用时请根据实际情况进行配置
+         */
+        debug {
+            //keystore中key的别名
+            keyAlias 'androiddebugkey'
+            //keystore中key的密码
+//            keyPassword ''
+            //keystore的文件路径，可以是绝对路径也可以是相对路径
+            storeFile file('C:/Users/Administrator/.android/debug.keystore')
+            //keystore的密码
+//            storePassword ''
+        }
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation 'com.android.support:appcompat-v7:28.0.0'
+    implementation 'com.android.support.constraint:constraint-layout:1.1.3'
+    implementation 'com.android.support:design:28.0.0'
+    implementation 'com.android.support:cardview-v7:28.0.0'
+    implementation 'com.android.support:recyclerview-v7:28.0.0'
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'com.android.support.test:runner:1.0.2'
+    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
+
+
+    ////高德地图定位用到的包
+    implementation files('libs/AMap_Location_V4.6.0_20190423.jar')
+    ///高德地图显示地图的包
+    implementation files('libs/Android_Map3D_SDK_V6.8.0_20190401.jar')
+    ////第三方框架：网络请求的包
+    implementation 'com.loopj.android:android-async-http:1.4.9'
+
+}

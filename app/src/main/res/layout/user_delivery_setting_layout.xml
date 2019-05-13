@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+
+    <!--高德地图-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="320dp"
+        android:background="#eee">
+        <com.amap.api.maps.MapView
+            android:id="@+id/map"
+            android:layout_width="match_parent"
+            android:layout_height="320dp" >
+        </com.amap.api.maps.MapView>
+    </LinearLayout>
+
+
+
+    <!--下方界面-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="240dp"
+        android:orientation="vertical">
+        <!--配送范围-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/user_delivery_setting_linearlayout_background"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="2"
+                android:layout_marginLeft="16dp"
+                android:text="配送范围:"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:gravity="center_vertical"/>
+
+            <EditText
+                android:id="@+id/range"
+                android:layout_width="match_parent"
+                android:layout_height="32dp"
+                android:layout_weight="3"
+                android:paddingRight="8dp"
+                android:gravity="center|end"
+                android:text="10555"
+                android:textSize="16sp"
+
+                android:background="@drawable/user_delivery_setting_text_background"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="3"
+                android:text="公里/KM"
+                android:textSize="16sp"
+                android:gravity="center"/>
+
+        </LinearLayout>
+        <!--起送价-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/user_delivery_setting_linearlayout_background"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="2"
+                android:layout_marginLeft="16dp"
+                android:text="起送价:"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:gravity="center_vertical"/>
+
+            <EditText
+                android:id="@+id/starting_price"
+                android:layout_width="match_parent"
+                android:layout_height="32dp"
+                android:layout_weight="7"
+                android:paddingRight="8dp"
+                android:gravity="center|end"
+                android:text="0.02"
+                android:textSize="16sp"
+                android:background="@drawable/user_delivery_setting_text_background"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="7"
+                android:text="元"
+                android:textSize="16sp"
+                android:gravity="center"/>
+        </LinearLayout>
+        <!--配送方案-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="2"
+                android:layout_marginLeft="16dp"
+                android:text="配送方案:"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:gravity="center_vertical"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="3"
+                android:text="满10公里免配送费"
+                android:textSize="16sp"
+                android:gravity="center"/>
+        </LinearLayout>
+        <!--保存-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btn_save"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/baseColor"
+                android:text="保存"
+                android:textSize="16sp"/>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

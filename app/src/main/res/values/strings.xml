@@ -1,0 +1,40 @@
+<resources>
+
+    <string name="app_name">Alliance</string>
+    <string name="order_record">订单记录</string>
+    <string name="user">个人中心</string>
+    <string name="order_manager">订单管理</string>
+    <string name="order_all">全部</string>
+    <string name="order_complete">完成</string>
+    <string name="order_unfinished">未完成</string>
+    <string name="order_reimburse">退款</string>
+    <string name="order_takeaway">外卖</string>
+    <string name="order_number">订单号</string>
+    <string name="realPay">实付款</string>
+    <string name="phone">下单号码</string>
+    <string name="time">下单时间</string>
+    <string name="type_takeaway">外卖点餐</string>
+    <string name="type_take_in_the_store">到店自取</string>
+    <string name="type_order_in_the_store">店内点餐</string>
+    <string name="delivery_fee">配送费</string>
+    <string name="status_unfinish">未完成</string>
+    <string name="status_complete">已完成</string>
+    <string name="request_reimburse">申请退款</string>
+    <string name="reimbursed">已退款</string>
+    <string name="one_key_finish">一键完成</string>
+    <string name="operate">操作</string>
+    <string name="select_delivery">选择配送</string>
+    <string name="evaluation_manager">评价管理</string>
+    <string name="evaluation_unanswered">未回复</string>
+    <string name="none_data">暂无订单数据</string>
+    <string name="reply">已回复</string>
+    <string name="one_star">一颗星</string>
+    <string name="tow_star">两颗星</string>
+    <string name="three_star">三颗星</string>
+
+
+
+
+
+
+</resources>

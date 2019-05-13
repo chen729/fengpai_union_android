@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <FrameLayout
+        android:id="@+id/a"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/part_1">
+
+    </FrameLayout>
+
+
+
+    <LinearLayout
+        android:id="@+id/part_1"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:layout_alignParentBottom="true">
+
+        <RadioGroup
+            android:id="@+id/radio_group"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:background="@drawable/main_activity_linearlayout_background">
+
+            <RadioButton
+                android:id="@+id/order_record"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:button="@null"
+                android:drawableTop="@drawable/tab_order_record_selector"
+                android:paddingTop="8dp"
+                android:text="订单记录"
+                android:textColor="@drawable/tab_text_selector"/>
+
+            <RadioButton
+                android:id="@+id/user"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:button="@null"
+                android:drawableTop="@drawable/tab_user_selector"
+                android:paddingTop="8dp"
+                android:text="个人中心"
+                android:textColor="@drawable/tab_text_selector"/>
+        </RadioGroup>
+    </LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <!--上半部分-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="168dp"
+        android:orientation="vertical">
+
+        <!--打印机编号-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            android:background="@drawable/user_store_setting_auto_switch_linearlayout_background">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="3"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="32dp"
+                    android:text="打印机编号:"
+                    android:textSize="16sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="2"
+                android:layout_marginRight="16sp"
+                android:gravity="center">
+
+                <EditText
+                    android:id="@+id/printer_id"
+                    android:layout_width="184dp"
+                    android:layout_height="40dp"
+                    android:paddingRight="8dp"
+                    android:gravity="end|center"
+                    android:text="918523531"
+                    android:textSize="16sp"
+                    android:background="@drawable/user_store_setting_push_text_background"/>
+            </LinearLayout>
+
+        </LinearLayout>
+        <!--打印次数-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            android:background="@drawable/user_store_setting_auto_switch_linearlayout_background">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="3"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="32dp"
+                    android:text="打印的次数:"
+                    android:textSize="14sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="2"
+                android:layout_marginRight="16sp"
+                android:gravity="center">
+
+                <EditText
+                    android:id="@+id/print_count"
+                    android:layout_width="184dp"
+                    android:layout_height="40dp"
+                    android:paddingRight="8dp"
+                    android:gravity="end|center"
+                    android:text="1"
+                    android:textSize="14sp"
+                    android:background="@drawable/user_store_setting_push_text_background"/>
+            </LinearLayout>
+
+        </LinearLayout>
+        <!--温馨提示-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="16sp"
+                android:layout_weight="1"
+                android:gravity="center">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="*温馨提示:同一订单最多只能打印5次"
+                    android:textSize="14sp" />
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <!--下半部分-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:layout_alignParentBottom="true">
+
+        <Button
+            android:id="@+id/save"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginBottom="8dp"
+            android:text="保存"
+            android:textSize="16sp"
+            android:background="@color/baseColor"/>
+
+    </LinearLayout>
+
+
+</RelativeLayout>

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    //状态栏
+    <color name="colorPrimaryDark">#ffc724</color>
+    //toolbar
+    <color name="colorPrimary">#ffc724</color>
+
+    <color name="colorAccent">#D81B60</color>
+
+    //底部导航栏字体颜色
+    <color name="bottomTabTextColor_false">#dbdbdb</color>
+    <color name="bottomTabTextColor_true">#ffc724</color>
+    //基础颜色
+    <color name="baseColor">#ffc724</color>
+    //线
+    <color name="lineColor">#78787878</color>
+    //未完成
+    <color name="unfinishedColor">#787878</color>
+    //已完成
+    <color name="finishedColor">#9ddb60</color>
+    //申请退款
+    <color name="requestColor">#f34654</color>
+    //已退款
+    <color name="refundedColor">#787878</color>
+    //到店自取
+    <color name="takeInTheStore">#f34654</color>
+    //店内点餐
+    <color name="orderInTheStore">#615ba2</color>
+    
+    //已回复星星背景颜色
+    <color name="oneStar">#ffc724</color>
+    <color name="twoStar">#fff</color>
+    <color name="threeStar">#5a89ed</color>
+    
+    //icon颜色
+    <color name="messageRecord">#d4257b</color>
+    <color name="storeInformation">#1095db</color>
+    <color name="deliverySetting">#1d9cdd</color>
+    <color name="storeSetting">#d81c04</color>
+    <color name="loginOut">#122078</color>
+
+    //店铺设置
+    //二维码，删除颜色
+    <color name="StoreSettingQDCodeDeleteColor">#ed5a50</color>
+
+    //订单详情 字体颜色
+    <color name="orderDetailsTextColor">#f0776f</color>
+</resources>

@@ -24,6 +24,16 @@
     <!-- ========================================== 高德地图用到的权限=========================================== -->
 
 
+    <!--拨打电话的权限-->
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <!--相机权限-->
+    <uses-feature android:name="android.hardware.camera" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <!--读写内存卡的权限-->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+
+
     <!--
         全局变量需要添加这句代码
         android:name="com.example.alliance.MyApplication"

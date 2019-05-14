@@ -97,7 +97,7 @@ public class UserFragment extends BaseFragment implements View.OnClickListener{
     public void onClick(View v) {
         switch (v.getId()){
             case R.id.card_view:
-                startActivity(new Intent(mContext, UserInformationActivity.class));
+                startActivity(new Intent(mContext, UserInformationActivity.class));         /////个人信息界面
                 break;
         }
     }

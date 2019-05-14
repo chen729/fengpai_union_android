@@ -21,8 +21,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 /*
-    个人中心Activity
-
+ * 个人信息界面包括头像，姓名
+ * 员工角色 充值密码
  */
 public class UserInformationActivity extends AppCompatActivity implements View.OnClickListener{
 
@@ -86,12 +86,11 @@ public class UserInformationActivity extends AppCompatActivity implements View.O
         SharedPreferences pre = getSharedPreferences("user_info",MODE_PRIVATE);
 
         user = new UserInformation(R.mipmap.avatar, pre.getString("userName",""), "18718816325", "设计师");
-
         adapter = new UserInformationRecyclerViewAdapter(UserInformationActivity.this,user);
-
         adapter.setOnItemClick(new UserInformationRecyclerViewAdapter.OnItemClick() {
             @Override
             public void onItemClick(View view, int position) {
+                Log.d("MyApp","你点击了谁："+position);
                 if (position == 1){
                     startActivity(new Intent(UserInformationActivity.this, UserNameActivity.class));
                 }

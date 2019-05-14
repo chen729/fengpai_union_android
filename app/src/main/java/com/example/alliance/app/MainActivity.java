@@ -2,7 +2,6 @@ package com.example.alliance.app;
 
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
@@ -22,7 +21,7 @@ public class MainActivity extends BaseActivity implements RadioGroup.OnCheckedCh
 
 
     private OrderRecordFragment orderRecordFragment;
-    private UserFragment userFragment;
+    private UserFragment userFragment;              /////个人中心的内容
     private FragmentManager fragmentManager;
 
     @Override
@@ -41,13 +40,9 @@ public class MainActivity extends BaseActivity implements RadioGroup.OnCheckedCh
     public void initData(){
 
 
-
     }
 
-    /*
-        获取fragmentManger
-
-    */
+    /* 获取fragmentManger  */
 
     public void setFragment() {
         fragmentManager = getSupportFragmentManager();

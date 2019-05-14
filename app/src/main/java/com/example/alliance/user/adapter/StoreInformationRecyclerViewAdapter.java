@@ -10,6 +10,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.example.alliance.R;
@@ -29,6 +30,7 @@ public class StoreInformationRecyclerViewAdapter extends RecyclerView.Adapter im
     private StoreInformation storeInformation;
     private ViewHolder vh;
     private TextView text;
+    String[] attrStr = {"店铺名称","店铺联系人:","联系电话:","店铺地址:","行业:"};
 
     public StoreInformationRecyclerViewAdapter(Context mContext, StoreInformation storeInformation) {
         this.mContext = mContext;
@@ -43,12 +45,14 @@ public class StoreInformationRecyclerViewAdapter extends RecyclerView.Adapter im
         private TextView type;
         private TextView typeName;
         private ImageView mBtnRightArrow;
+        private LinearLayout llItem;            ////一整行，用于点击事件
 
         public ViewHolder(Context mContext, View itemView){
             super(itemView);
             type = itemView.findViewById(R.id.type);
             typeName = itemView.findViewById(R.id.type_name);
             mBtnRightArrow = itemView.findViewById(R.id.btn_right_arrow);
+            llItem = itemView.findViewById(R.id.llItem);        ////一整行，用于点击事件
         }
     }
     @NonNull
@@ -59,112 +63,75 @@ public class StoreInformationRecyclerViewAdapter extends RecyclerView.Adapter im
 
     }
 
+
+
     @Override
     public void onBindViewHolder(@NonNull RecyclerView.ViewHolder viewHolder, int i) {
         vh = (ViewHolder)viewHolder;
 
-        if (i == 0){
+        /*if (i == 0){
             text = vh.typeName;
-            vh.type.setText("店铺名称");
+            vh.type.setText();
             vh.typeName.setText(storeInformation.getStoreName());
             vh.mBtnRightArrow.setOnClickListener(this);
             vh.mBtnRightArrow.setTag(i);
         }
 
         else if (i == 1){
-            vh.type.setText("店铺联系人:");
+            vh.type.setText();
             vh.typeName.setText(storeInformation.getStoreOwner());
             vh.mBtnRightArrow.setOnClickListener(this);
             vh.mBtnRightArrow.setTag(i);
         }
         else if (i == 2){
-            vh.type.setText("联系电话:");
+            vh.type.setText();
             vh.typeName.setText(storeInformation.getPhone());
             vh.mBtnRightArrow.setOnClickListener(this);
             vh.mBtnRightArrow.setTag(i);
 
         }
         else if(i == 3){
-            vh.type.setText("店铺地址:");
+            vh.type.setText();
             vh.typeName.setText(storeInformation.getStoreAddress());
             vh.mBtnRightArrow.setOnClickListener(this);
             vh.mBtnRightArrow.setTag(i);
         }
         else if (i == 4){
-            vh.type.setText("行业:");
+            vh.type.setText();
             vh.typeName.setText(storeInformation.getType());
             vh.mBtnRightArrow.setOnClickListener(this);
             vh.mBtnRightArrow.setTag(i);
-        }
+        }*/
 
+
+        /////201905131632  update by jack
+        switch (i){
+            case 0:
+                text = vh.typeName;
+                break;
+        }
+        if (i <= attrStr.length )
+            vh.type.setText(attrStr[i]);
+        vh.typeName.setText(storeInformation.getStoreName());
+        vh.llItem.setOnClickListener(this);
+        vh.llItem.setTag(i);
 
     }
 
     @Override
     public void onClick(View v) {
-        switch (v.getId()){
-            case R.id.btn_right_arrow:
-                final EditText editText = new EditText(mContext);
+        String[] titleCount = {"请输入店铺名称","请输入店铺联系人","请输入联系电话","请输入店铺地址","请输入行业"};
+        final EditText editText = new EditText(mContext);
+        int index = (int)v.getTag();
+        AlertDialog.Builder input = new AlertDialog.Builder(mContext);
+        input.setTitle(titleCount[index]).setView(editText);
+        input.setPositiveButton("确定", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                text.setText(editText.getText().toString());
+            }
+        }).show();
 
-                AlertDialog.Builder input = new AlertDialog.Builder(mContext);
-                switch ((int)v.getTag()){
-                    case 0:
-                        input.setTitle("请输入店铺名称").setView(editText);
-                        input.setPositiveButton("确定", new DialogInterface.OnClickListener() {
-
-                            @Override
-                            public void onClick(DialogInterface dialog, int which) {
-                                text.setText(editText.getText().toString());
-                            }
-                        }).show();
-                        break;
-
-                    case 1:
-                        input.setTitle("请输入店铺联系人").setView(editText);
-                        input.setPositiveButton("确定", new DialogInterface.OnClickListener() {
-
-                            @Override
-                            public void onClick(DialogInterface dialog, int which) {
-                                text.setText(editText.getText().toString());
-                            }
-                        }).show();
-                        break;
-
-                    case 2:
-                        input.setTitle("请输入联系电话").setView(editText);
-                        input.setPositiveButton("确定", new DialogInterface.OnClickListener() {
-
-                            @Override
-                            public void onClick(DialogInterface dialog, int which) {
-                                text.setText(editText.getText().toString());
-                            }
-                        }).show();
-                        break;
-
-                    case 3:
-                        input.setTitle("请输入店铺地址").setView(editText);
-                        input.setPositiveButton("确定", new DialogInterface.OnClickListener() {
-
-                            @Override
-                            public void onClick(DialogInterface dialog, int which) {
-                                text.setText(editText.getText().toString());
-                            }
-                        }).show();
-                        break;
-
-                    case 4:
-                        input.setTitle("请输入行业").setView(editText);
-                        input.setPositiveButton("确定", new DialogInterface.OnClickListener() {
-
-                            @Override
-                            public void onClick(DialogInterface dialog, int which) {
-                                text.setText(editText.getText().toString());
-                            }
-                        }).show();
-                        break;
-                }
-                break;
-        }
     }
 
 

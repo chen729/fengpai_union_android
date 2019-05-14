@@ -1,15 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
+<RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical">
 
-
-
     <!--高德地图-->
     <LinearLayout
+        android:id="@+id/llMap"
         android:layout_width="match_parent"
         android:layout_height="320dp"
         android:background="#eee">
@@ -20,13 +19,32 @@
         </com.amap.api.maps.MapView>
     </LinearLayout>
 
+    <!--保存-->
+    <LinearLayout
+        android:id="@+id/llSave"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_weight="1"
+        android:orientation="horizontal"
+        android:layout_alignParentBottom="true">
 
+        <Button
+            android:id="@+id/btn_save"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/baseColor"
+            android:text="保存"
+            android:textSize="16sp"/>
+    </LinearLayout>
 
     <!--下方界面-->
     <LinearLayout
+        android:id="@+id/llMsg"
         android:layout_width="match_parent"
         android:layout_height="240dp"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        android:layout_above="@+id/llSave"
+        android:layout_below="@+id/llMap">
         <!--配送范围-->
         <LinearLayout
             android:layout_width="match_parent"
@@ -128,20 +146,6 @@
                 android:textSize="16sp"
                 android:gravity="center"/>
         </LinearLayout>
-        <!--保存-->
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:orientation="horizontal">
-
-            <Button
-                android:id="@+id/btn_save"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:background="@color/baseColor"
-                android:text="保存"
-                android:textSize="16sp"/>
-        </LinearLayout>
     </LinearLayout>
-</LinearLayout>
+
+</RelativeLayout>

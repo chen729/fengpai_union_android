@@ -13,11 +13,9 @@ import com.example.alliance.user.adapter.DeliverySettingViewPagerAdapter;
 
 import java.util.ArrayList;
 import java.util.List;
-/*
-    配送设置Activity
 
- */
 
+/* 配送设置Activity */
 public class DeliverySettingActivity extends AppCompatActivity implements View.OnClickListener {
 
     private ImageView mBtnBack;

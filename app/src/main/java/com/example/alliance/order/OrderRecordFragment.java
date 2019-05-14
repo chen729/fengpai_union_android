@@ -12,11 +12,8 @@ import com.example.alliance.order.EvaluationManager.EvaluationManagerFragment;
 import com.example.alliance.order.OrderManager.OrderManagerFragment;
 
 /*
-
     订单记录的Fragment
     包括两个fragment，订单管理、评价管理
-
-
  */
 
 public class OrderRecordFragment extends BaseFragment implements RadioGroup.OnCheckedChangeListener{

@@ -1,5 +1,7 @@
 package com.example.alliance.order.OrderManager.activity;
 
+import android.content.Intent;
+import android.net.Uri;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.GridLayoutManager;
@@ -13,6 +15,9 @@ import android.widget.Toast;
 import com.example.alliance.R;
 import com.example.alliance.order.OrderManager.adapter.OrderDetailsRecyclerViewAdapter;
 
+/**
+ * 订单详情界面
+ */
 public class OrderDetailsActivity extends AppCompatActivity implements View.OnClickListener {
 
     private ImageView mBtnBack;
@@ -92,8 +97,12 @@ public class OrderDetailsActivity extends AppCompatActivity implements View.OnCl
             case R.id.back:
                 finish();
                 break;
-            case R.id.phone_call:
-                Toast.makeText(OrderDetailsActivity.this,"联系配送员",Toast.LENGTH_LONG).show();
+            case R.id.phone_call:           ////拨打电话
+                String  number = "123456789101";
+                Intent intent = new Intent();
+                intent.setAction(Intent.ACTION_CALL);
+                intent.setData(Uri.parse("tel:"+number));
+                startActivity(intent);
                 break;
             case R.id.select_delivery:
                 Toast.makeText(OrderDetailsActivity.this,"选择配送",Toast.LENGTH_LONG).show();

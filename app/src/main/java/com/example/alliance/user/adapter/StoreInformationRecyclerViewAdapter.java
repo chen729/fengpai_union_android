@@ -17,7 +17,9 @@ import com.example.alliance.R;
 import com.example.alliance.user.base.StoreInformation;
 
 
-
+/**
+ * 这个是什么界面
+ */
 public class StoreInformationRecyclerViewAdapter extends RecyclerView.Adapter implements View.OnClickListener{
 
 
